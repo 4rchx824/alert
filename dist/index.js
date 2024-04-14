@@ -93,35 +93,39 @@ function cn(...inputs) {
 }
 
 // src/index.tsx
+var import_lucide_react = require("lucide-react");
 var import_jsx_runtime = require("react/jsx-runtime");
-var alertVariants = (0, import_class_variance_authority.cva)(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300",
-  {
-    variants: {
-      variant: {
-        default: "bg-slate-900 text-slate-50 hover:bg-slate-900/90 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90",
-        destructive: "bg-red-500 text-slate-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/90",
-        outline: "border border-slate-200 bg-white hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50",
-        secondary: "bg-slate-100 text-slate-900 hover:bg-slate-100/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80",
-        ghost: "hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50",
-        link: "text-slate-900 underline-offset-4 hover:underline dark:text-slate-50"
-      },
-      size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10"
-      }
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default"
+var alertVariants = (0, import_class_variance_authority.cva)("inc-p-3 inc-rounded-lg inc-w-full inc-flex inc-flex-col inc-items-center inc-px-2", {
+  variants: {
+    variant: {
+      info: "inc-bg-info-accent inc-text-info",
+      danger: "inc-bg-danger-accent inc-text-danger",
+      warning: "inc-bg-warning-accent inc-text-warning",
+      success: "inc-bg-success-accent inc-text-success"
     }
+  },
+  defaultVariants: {
+    variant: "info"
   }
-);
+});
 var Alert = React.forwardRef((_a, ref) => {
-  var _b = _a, { className, variant, size, children } = _b, props = __objRest(_b, ["className", "variant", "size", "children"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", __spreadProps(__spreadValues({ className: cn(alertVariants({ variant, size, className })), ref }, props), { children }));
+  var _b = _a, { className, variant, children, dismissable = false, showIcon = true, onDismissed } = _b, props = __objRest(_b, ["className", "variant", "children", "dismissable", "showIcon", "onDismissed"]);
+  const [dismissed, setDismissed] = React.useState(false);
+  let icon = /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_lucide_react.Info, {});
+  if (variant === "info") {
+    icon = /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_lucide_react.Info, { size: 24, className: "inc-fill-info inc-stroke-info-accent" });
+  } else if (variant === "danger") {
+    icon = /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_lucide_react.XCircle, { size: 24, className: "inc-fill-danger inc-stroke-danger-accent" });
+  } else if (variant === "warning") {
+    icon = /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_lucide_react.CircleAlert, { size: 24, className: "inc-fill-warning inc-stroke-warning-accent" });
+  } else if (variant === "success") {
+    icon = /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_lucide_react.CircleCheck, { size: 24, className: "inc-fill-success inc-stroke-success-accent" });
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", __spreadProps(__spreadValues({ className: cn(alertVariants({ variant, className })), ref }, props), { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "inc-flex inc-flex-row inc-space-x-2", children: [
+    showIcon && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "inc-mr-2", children: icon }),
+    children,
+    dismissable && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: onDismissed, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_lucide_react.XIcon, { size: 24, className: "inc-stroke-gray-400" }) })
+  ] }) }));
 });
 Alert.displayName = "Alert";
 // Annotate the CommonJS export names for ESM import in node:
