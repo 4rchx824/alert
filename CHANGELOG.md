@@ -1,5 +1,11 @@
 # @4rchx824/alert
 
+## 0.3.12
+
+### Patch Changes
+
+- finish input
+
 ## 0.3.11
 
 ### Patch Changes
