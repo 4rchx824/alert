@@ -1,5 +1,101 @@
 # @4rchx824/alert
 
+## 0.3.11
+
+### Patch Changes
+
+- test
+
+## 0.3.10
+
+### Patch Changes
+
+- input component
+
+## 0.3.9
+
+### Patch Changes
+
+- test
+
+## 0.3.8
+
+### Patch Changes
+
+- input
+
+## 0.3.7
+
+### Patch Changes
+
+- test
+
+## 0.3.6
+
+### Patch Changes
+
+- test
+
+## 0.3.5
+
+### Patch Changes
+
+- test
+
+## 0.3.4
+
+### Patch Changes
+
+- test
+
+## 0.3.3
+
+### Patch Changes
+
+- test
+
+## 0.3.2
+
+### Patch Changes
+
+- test
+
+## 0.3.1
+
+### Patch Changes
+
+- test
+
+## 0.3.0
+
+### Minor Changes
+
+- new package name
+
+## 0.2.5
+
+### Patch Changes
+
+- test
+
+## 0.2.4
+
+### Patch Changes
+
+- test
+
+## 0.2.3
+
+### Patch Changes
+
+- test
+
+## 0.2.2
+
+### Patch Changes
+
+- test
+
 ## 0.2.1
 
 ### Patch Changes

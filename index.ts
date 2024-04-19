@@ -1,6 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: ["./src/**/*.tsx"],
+import plugin from "tailwindcss/plugin";
+
+export default plugin(function () {}, {
+    // content: ["./node_modules/@4rchx824/ui/dist/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
             colors: {
@@ -46,5 +47,4 @@ module.exports = {
             },
         },
     },
-    plugins: [],
-};
+});

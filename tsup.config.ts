@@ -1,7 +1,7 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-    entry: ["src/index.tsx"],
+    entry: ["index.ts", "src/components/alert.tsx", "src/components/input.tsx"],
     dts: true,
     clean: true,
     sourcemap: true,
