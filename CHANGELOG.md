@@ -1,5 +1,11 @@
 # @4rchx824/alert
 
+## 0.3.13
+
+### Patch Changes
+
+- readme
+
 ## 0.3.12
 
 ### Patch Changes
