@@ -9,7 +9,9 @@
         "url": "https://github.com/4rchx824/alert.git"
     },
     "description": "",
-    "keywords": [],
+    "keywords": [
+        "react", "tailwindcss", "typescript", "ui", "components", "alert", "input"
+    ],
     "license": "ISC",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
